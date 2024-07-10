@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Windows XP Meme Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="meme-generator">
+      <div class="meme-container">
+        <canvas id="memeCanvas" width="256" height="256"></canvas>
+        <div class="meme-display">
+          <!-- Memes will appear here -->
+        </div>
+      </div>
+      <div class="trait-controls">
+        <div class="control-group">
+          <label for="background">Background:</label>
+          <button class="arrow-btn" onclick="changeTrait('background', -1)">Previous</button>
+          <button class="arrow-btn" onclick="changeTrait('background', 1)">Next</button>
+        </div>
+        <div class="control-group">
+          <label for="hat">Hat:</label>
+          <button class="arrow-btn" onclick="changeTrait('hat', -1)">Previous</button>
+          <button class="arrow-btn" onclick="changeTrait('hat', 1)">Next</button>
+        </div>
+        <div class="control-group">
+          <label for="eyes">Eyes:</label>
+          <button class="arrow-btn" onclick="changeTrait('eyes', -1)">Previous</button>
+          <button class="arrow-btn" onclick="changeTrait('eyes', 1)">Next</button>
+        </div>
+        <div class="control-group">
+          <label for="accessories">Accessories:</label>
+          <button class="arrow-btn" onclick="changeTrait('accessories', -1)">Previous</button>
+          <button class="arrow-btn" onclick="changeTrait('accessories', 1)">Next</button>
+        </div>
+      </div>
+      <div class="action-buttons">
+        <button class="action-btn" onclick="randomize()">Randomize</button>
+        <button class="action-btn" onclick="reset()">Reset</button>
+        <button class="action-btn" onclick="download()">Download</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
